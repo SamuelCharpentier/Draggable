@@ -1,26 +1,59 @@
 {
-  "name": "my-webpack-project",
-  "version": "1.0.0",
-  "description": "My webpack project",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --mode=production --node-env=production",
-    "build:dev": "webpack --mode=development",
-    "build:prod": "webpack --mode=production --node-env=production",
-    "watch": "webpack --watch"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "bezier-easing": "^2.1.0"
-  },
-  "devDependencies": {
-    "@webpack-cli/generators": "^3.0.7",
-    "ts-loader": "^9.5.1",
-    "typescript": "^5.2.2",
-    "webpack": "^5.89.0",
-    "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^4.15.1"
-  }
+	"name": "draggable",
+	"version": "1.0.0",
+	"description": "Draggable class built with TypeScript for front end use. Meant to be extended and used as dependencies.",
+	"type": "module",
+	"exports": {
+		"./*": {
+			"types": "./build/types/*.d.ts",
+			"require": "./build/cjs/*.js",
+			"import": "./build/esm/*.js",
+			"default": "./build/esm/*.js"
+		}
+	},
+	"main": "./dist/index.js",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SamuelCharpentier/Draggable"
+	},
+	"bugs": {
+		"url": "https://github.com/SamuelCharpentier/Draggable/issues"
+	  },
+	  "homepage": "https://github.com/SamuelCharpentier/Draggable#readme"
+	"keywords": [
+		"draggable",
+		"typescript",
+		"typescript-library",
+		"typescript-module",
+		"typescript-class",
+		"typescript-frontend",
+		"typescript-frontend-library",
+		"typescript-frontend-module",
+		"typescript-frontend-class",
+		"typescript-frontend-draggable",
+		"typescript-frontend-draggable-library",
+		"typescript-frontend-draggable-module",
+		"typescript-frontend-draggable-class"
+	],
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"build": "tsup"
+	},
+	"author": "Samuel Charpentier",
+	"license": "MIT",
+	"devDependencies": {
+		"@types/jest": "^29.5.11",
+		"jest": "^29.7.0",
+		"npm-run-all": "^4.1.5",
+		"terser": "^5.26.0",
+		"ts-jest": "^29.1.1",
+		"ts-node": "^10.9.2",
+		"tsup": "^8.0.1",
+		"typescript": "^5.3.3"
+	}
 }
