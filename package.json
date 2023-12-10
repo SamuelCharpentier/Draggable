@@ -23,8 +23,8 @@
 	},
 	"bugs": {
 		"url": "https://github.com/SamuelCharpentier/Draggable/issues"
-	  },
-	  "homepage": "https://github.com/SamuelCharpentier/Draggable#readme"
+	},
+	"homepage": "https://github.com/SamuelCharpentier/Draggable#readme",
 	"keywords": [
 		"draggable",
 		"typescript",
@@ -42,13 +42,18 @@
 	],
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "tsup"
+		"build": "tsup --config tsup-prod.config.ts",
+		"build:dev": "tsup --config tsup-dev.config.ts",
+		"start": "npm-run-all --parallel build:dev serve:dev",
+		"serve:dev": "node dev-server"
 	},
 	"author": "Samuel Charpentier",
 	"license": "MIT",
 	"devDependencies": {
 		"@types/jest": "^29.5.11",
 		"jest": "^29.7.0",
+		"live-server": "^1.2.2",
+		"nodemon": "^3.0.2",
 		"npm-run-all": "^4.1.5",
 		"terser": "^5.26.0",
 		"ts-jest": "^29.1.1",
