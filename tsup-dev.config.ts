@@ -1,12 +1,12 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-	entry: ['src/index.ts'],
+	entry: ['src/draggable.ts'],
 	platform: 'browser',
-	target: 'es2015',
-	format: ['cjs'],
+	target: 'es5',
+	format: ['esm'],
 	dts: true,
-	splitting: true,
+	splitting: false,
 	sourcemap: true,
 	clean: true,
 	minify: false,

@@ -6,3 +6,6 @@
 
 # Build files
 /dist
+
+# Dev built files
+/dev/scripts

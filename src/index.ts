@@ -21,7 +21,7 @@ function isStampedPosition(
 	);
 }
 
-export class Dragable {
+export class Draggable {
 	DOMelement: HTMLElement;
 	private mouseData: {
 		mouseMove?: {
